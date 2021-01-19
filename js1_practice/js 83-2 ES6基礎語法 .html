@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+
+        /* var foo = function () {
+            return 1;
+        }
+        console.log(foo()); */
+
+        /* let foo = () => 1;
+        console.log(foo()); */
+
+        /*  let foo = () => 1;
+         console.log(foo()); */
+
+        /* let foo = (a) => a;
+        console.log(foo(10)); */
+
+        /* let foo = (a) => {//多條語句加上花括號{} ，如{...}
+            let b = "fff";
+            return a + b;
+        }
+        console.log(foo(10));
+    } */
+
+        /*  var foo = () => {
+             console.log(this);
+         }
+         foo(); */
+
+        /* var name = "window";
+        var obj = {
+            "name": "john",
+            "sayhelloe": function () {
+                console.log(this.name);
+            }
+        };
+        obj.sayhelloe(); */
+
+
+        /*  var name = "window";
+         var obj = {
+             "name": "j00ohn",
+             "sayhelloe": () => {
+                 console.log(this.name);
+             }
+         }
+         obj.sayhelloe(); */
+
+
+        /* var name = "window";
+        var obj = {
+            "name": "j00ohn",
+            "sayhelloe": () => {
+                console.log(this);
+                setTimeout(() => {
+                    console.log(this.name)
+                }, 1000);
+            }
+        }
+        obj.sayhelloe(); */
+
+
+        /* // ES5
+        var array = ['1', '2345', '567', '89'];
+        array = array.filter(function (item) {
+            return item.length > 2;
+
+        });
+        console.log(array);     // ["2345", "567"] */
+
+        var feedTheCat = (cat) => {
+            if (cat === 'hungry') {
+                return 'Feed the cat';
+            } else {
+                return 'Do not feed the cat';
+            }
+        }
+
+        console.log(feedTheCat);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

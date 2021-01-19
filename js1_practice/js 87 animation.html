@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function(){
+                var spx = 3;
+                var spy = 1;
+                var div1 =document.querySelector('div');
+                function move1() {
+                    var cLeft = parseInt(window.getComputedStyle(div1).left);
+                    var cTop = parseInt(window.getComputedStyle(div1).top);
+                    var mleft = cLeft + spx;
+                    var mtop = cTop + spy;
+
+                    div1.style.left = cLeft + spx + "px";
+                    // div1.style.top = cTop + spy + "px";
+                }
+                setInterval(function () {
+                    move1()},20);
+                }
+        
+
+    </script>
+</head>
+
+<body>
+    <div>3333</div>
+</body>
+
+</html>

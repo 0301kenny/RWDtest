@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100,300,500,600,800&display=swap"
+        rel="stylesheet">
+    <title>011 破格式設計</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            background-image: linear-gradient(-45deg, #fffaf0, #f8c3c1);
+        }
+
+        .wrap {
+            display: flex;
+            width: 1200px;
+            margin: 100px auto;
+            /* background-color: #999999; */
+            padding-top: 75px;
+        }
+
+        .item {
+            width: 370px;
+            margin: 0 15px;
+            text-align: center;
+            border: 10px solid #f9cec2;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 10px 20px 50px #f7b6a7;
+
+        }
+
+        .item h3 {
+            color: #f5afac;
+        }
+
+        .item p {
+            color: #cccccc;
+
+        }
+
+        .item .icon {
+            width: 150px;
+            height: 150px;
+            background-color: #ffffff;
+            margin: -75px auto 0;
+            font-size: 65px;
+            line-height: 150px;
+            border-radius: 50%;
+            color: #f5afac;
+            position: relative;
+            /* vertical-align: middle; */
+
+        }
+
+        .item .icon:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            border-top: 10px solid #f9cec2;
+            border-right: 10px solid #f9cec2;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid transparent;
+            left: -10px;
+            top: -10px;
+            border-radius: 50%;
+            transform: rotate(-45deg);
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 65px;
+            /* Preferred icon size */
+            display: inline-block;
+            line-height: 150px;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            color: #f5afac;
+            /* vertical-align: middle; */
+
+
+
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+
+        .item:hover .material-icons {
+            animation: ss .2s linear infinite alternate;
+        }
+
+        .item .txt {
+            padding: 20px 20px 2em;
+        }
+
+        .item h3 {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f9cec2;
+            margin-bottom: 10px;
+        }
+
+        @keyframes ss {
+            0% {
+                transform: rotate(-10deg);
+            }
+
+            100% {
+                transform: rotate(10deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="item">
+            <div class="icon"><span class="material-icons">
+                    account_balance_wallet
+                </span></div>
+            <div class="txt">
+                <h3>步驟</h3>
+                <p>禁止不可以尋找教程唱片未經，有機會每一個回應高度體育尤其是證明開了，輸入引進上去下載次數，一段時間最好的食品老大購物我一，到我手段為此客服報導備案如有是的，你。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon"><span class="material-icons">
+                    bug_report
+                </span></div>
+            <div class="txt">
+                <h3>條款步驟</h3>
+                <p>禁止不可以尋找未經，有機會每一個回應度體育尤其是證明開了，輸入引進上去下載次數，一段時間最好的食品老大購物我一，到我手段為此客服報導備案如有是的，你。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon"><span class="material-icons">
+                    eco
+                </span></div>
+            <div class="txt">
+                <h3>均為</h3>
+                <p>禁止不可以尋找教程唱片未回應高度體育尤其是證明開了，輸入引進上去下載次數，一段時間最好的食品老大購物我一，到我手段為此客服報導備案如有是的，你。</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

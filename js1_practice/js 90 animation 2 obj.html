@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+
+        }
+
+        div:nth-of-type(2) {
+            left: 500px;
+            top: 500px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var spx = 15;
+            var spy = 13;
+            var div1 = document.querySelector('div');
+            var div2 = document.querySelector('div:nth-of-type(2)');
+            div1.spx = 15;
+            div1.spy = 13;
+            div2.spx = 15;
+            div2.spy = 13;
+            function move1(el) {
+                var cLeft = parseInt(window.getComputedStyle(el).left);
+                var cTop = parseInt(window.getComputedStyle(el).top);
+
+                checkBorderCollision(el);
+                if (checkBlockCollision(
+                    div1, div2
+                )) {
+                    el.spx *= -1;
+                    el.spy *= -1;
+                };
+                var mleft = cLeft + el.spx;
+                var mtop = cTop + el.spy;
+
+                el.style.left = mleft + "px";
+                el.style.top = mtop + "px";
+            }
+
+            function checkBorderCollision(el) {
+                var style = window.getComputedStyle(el);
+                var left = parseInt(style.left);
+                var top = parseInt(style.top);
+                var w = parseInt(style.width);
+                var h = parseInt(style.height);
+
+                if (left < 0) {
+                    left = 0;
+                    el.spx *= -1;
+                }
+                if (left > window.innerWidth - w) {
+                    left = window.innerWidth - w;
+                    el.spx *= -1;
+                }
+
+                if (top < 0) {
+                    top = 0;
+                    el.spy *= -1;
+                }
+
+                if (top > window.innerHeight - h) {
+                    top = window.innerHeight - h;
+                    el.spy *= -1;
+                }
+
+                el.style.top = top + 'px';
+                el.style.left = left + 'px';
+            }
+
+            function checkBlockCollision(block1, block2) {
+                var left1 = parseInt(window.getComputedStyle(block1).left);
+                var left2 = parseInt(window.getComputedStyle(block2).left);
+
+                var top1 = parseInt(window.getComputedStyle(block1).top);
+                var top2 = parseInt(window.getComputedStyle(block2).top);
+
+                var width1 = parseInt(window.getComputedStyle(block1).width);
+                var width2 = parseInt(window.getComputedStyle(block2).width);
+
+                var height1 = parseInt(window.getComputedStyle(block1).height);
+                var height2 = parseInt(window.getComputedStyle(block2).height);
+
+                var center1 = {
+                    x: left1 + width1 / 2,
+                    y: top1 + height1 / 2
+                }
+
+                var center2 = {
+                    x: left2 + width2 / 2,
+                    y: top2 + height2 / 2
+                }
+
+                var diffX = Math.abs(center1.x - center2.x);
+                var diffY = Math.abs(center1.y - center2.y);
+
+                if (diffX < (width1 + width2) / 2 && diffY < (height1 + height2) / 2) {
+                    return true;
+                }
+                return false;
+            }
+            setInterval(function () {
+                move1(div1)
+                move1(div2)
+            }, 30);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div>3333</div>
+    <div>
+
+    </div>
+</body>
+
+</html>

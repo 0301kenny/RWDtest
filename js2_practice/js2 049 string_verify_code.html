@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*function numTestCode(n) {
+                var arr = [];
+                for (var i = 0; i < n; i++) {
+                    var num = parseInt(Math.random() * 10);
+                    arr.push(num);
+                }
+                return arr.join("");
+            }
+
+            console.log(numTestCode(6))
+
+            function testCode(n) {
+                var arr = [];
+                for (var i = 0; i < n; i++) {
+                    var num = parseInt(Math.random() * 123);
+                    if (num >= 0 && num <= 9) {
+                        arr.push(num);
+                    } else if (num >= 97 && num <= 122 || num >= 65 && num >= 90) {
+                        arr.push(String.fromCharCode(num));
+                    } else {
+                        i--;
+                    }
+                }
+                return arr.join("");
+            }
+
+            console.log(testCode(6))*/
+    /*function ccc(supstr, substr) {
+        var arr = supstr.split(substr);
+        return arr.length;
+    }
+
+    console.log(ccc("abcabcabc", "abc"));
+    */
+    alert(isEmail("mail@1000phone.com"))
+    alert(isEmail("$mail@1000phone.com"))
+    alert(isEmail("mail@1000phone.comp"))
+
+    function isEmail(email) {
+        // 查找@符號的位置和以及文本
+        var index = email.indexOf("@");
+        if (index == -1) {
+            return false;
+        } else {
+            var endstr = email.substring(index);
+            if (endstr != "@1000phone.com") {
+                return false;
+            } else {
+                var username = email.substring(0, index);
+                var isYes = true;
+                for (var i = 0; i < username.length; i++) {
+                    if (!isDEF(username[i])) {
+                        isYes = false;
+                        break3
+                    }
+                }
+                return isYes;
+
+
+
+            }
+        }
+    }
+    // alert(isDEF("@"))
+
+    function isDEF(charStr) {
+        if (charStr >= "a" && charStr <= "z" || charStr >= "A" && charStr <= "Z" || charStr >= "0" && charStr <= "9" || charStr == "_") {
+            return true;
+        } else {
+            return false;
+        }
+        // body...
+    }
+    </script>
+</head>
+
+<body>
+    可聞
+</body>
+
+</html>

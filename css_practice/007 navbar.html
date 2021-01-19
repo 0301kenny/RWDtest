@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>007 導覽列 navigation bar</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 16px;
+            /* Preferred icon size */
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            color: #444;
+            vertical-align: middle;
+
+            /* Support for all WebKit browsers. */
+            -webkit-font-smoothing: antialiased;
+            /* Support for Safari and Chrome. */
+            text-rendering: optimizeLegibility;
+
+            /* Support for Firefox. */
+            -moz-osx-font-smoothing: grayscale;
+
+            /* Support for IE. */
+            font-feature-settings: 'liga';
+        }
+
+        .main-header {
+            background: linear-gradient(15deg, #df4, #2d4f5d);
+        }
+
+        .main-header .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .main-header .logo {
+            width: 100px;
+
+        }
+
+        .main-header .logo img {
+            width: 100%;
+            vertical-align: middle;
+
+        }
+
+        .main-header .main-nav {
+            display: flex;
+            margin: auto;
+        }
+
+        .main-header .main-nav a {
+            position: relative;
+            font-size: 14px;
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 1em;
+            transform: translateY(0);
+            transition: .6s;
+        }
+
+        .main-header .main-nav a:hover {
+            transform: translateY(-5px);
+        }
+
+        .main-header .main-nav a:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: -5px;
+            height: 0;
+            border-bottom: 1px solid #fff;
+            transition: .6s;
+        }
+
+        .main-header .main-nav a:hover:after {
+            left: 0;
+            right: 0;
+        }
+
+        .main-header .header-search {
+            display: flex;
+        }
+
+        .main-header .header-search button,
+        .main-header .header-search input {
+            border: none;
+            background-color: #fff;
+            padding: 5px 10px;
+        }
+
+        .main-header .header-search button {
+            border-radius: 0 200px 200px 0;
+        }
+
+        .main-header .header-search input {
+            border-radius: 200px 0 0 200px;
+
+        }
+
+        .main-header .header-search button:focus,
+        .main-header .header-search input:focus {
+            outline: none;
+        }
+    </style>
+    <script src="js_tool.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="https://static.acer.com/up/Resource/Libraries/Acer/4438/images/logo.svg" alt="宏碁">
+            </a>
+            <nav class="main-nav">
+                <a href="#">障礙學者跟着重要收藏</a>
+                <a href="#">好好驚訝請在依法</a>
+                <a href="#">不起唱片放心到了鄭州</a>
+                <a href="#">轉身感受一下</a>
+            </nav>
+            <form class="header-search">
+                <input type="search" name="" id="">
+                <button><i class="material-icons md-light">search</i>
+                </button>
+            </form>
+        </div>
+    </header>
+</body>
+
+</html>

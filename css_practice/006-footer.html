@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100,200,300,500,700&display=swap"
+        rel="stylesheet">
+    <title>006 網頁頁頁尾版塊 footer</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .main-footer {
+            padding: 150px 0 0;
+            background: linear-gradient(-20deg, #5a6, #2c3);
+        }
+
+        .main-footer .container {
+            display: flex;
+            width: 1200px;
+            margin: auto;
+        }
+
+        .footer-item h4 {
+            font-size: 24px;
+            color: #fff;
+            border-bottom: 1px dotted #fff;
+            margin-bottom: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        .footer-item {
+            width: 0;
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+
+        .footer-item nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-item nav a {
+            color: #fff;
+            line-height: 1.4;
+            text-decoration: none;
+            padding: 5px 0;
+            transition: .4s;
+        }
+
+        .footer-item nav a:hover {
+            color: #fa0;
+            line-height: 1.4;
+            text-decoration: none;
+            padding: 5px 0;
+            transform: translateX(4px);
+        }
+
+        .footer-subcr {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-subcr form {
+            display: flex;
+            width: 100%;
+            margin: auto 0;
+        }
+
+        .footer-subcr input[type="text"],
+        .footer-subcr input[type="submit"] {
+            border: none;
+            padding: 5px 10px;
+        }
+
+        .footer-subcr input[type="text"] {
+            width: 0;
+            flex-grow: 1;
+        }
+
+        .footer-subcr input[type="submit"] {
+            color: #70f6df;
+            background-color: #3e5293;
+        }
+
+        .copyright {
+            text-align: center;
+            margin: 150px 0 0;
+            padding: 10px 0;
+            background-color: #a1e40e;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-footer">
+        <div class="container">
+            <div class="footer-item">
+                <h4>關於課程</h4>
+                <nav>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>關於課程</h4>
+                <nav>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>關於課程</h4>
+                <nav>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                    <a href="#">>次選單比較細</a>
+                </nav>
+            </div>
+            <div class="footer-item footer-subcr">
+                <h4>關於課程</h4>
+                <form>
+                    <input type="text" name="" id="">
+                    <input type="submit" name="" value="訂閱">
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy 2019 金魚都能懂的這個網頁畫面怎麼切
+        </div>
+    </div>
+</body>
+
+</html>

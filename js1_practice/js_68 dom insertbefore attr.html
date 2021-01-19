@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background-color: #222;
+            color: #aaa;
+        }
+    </style>
+    <script src="js_tool.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+
+            var node1 = cewt("strong", "strong 文本");
+            var ospan = document.getElementsByTagName("span")[0];
+            // ospan.parentNode.insertBefore(node1,ospan);
+            insertAfter(node1, ospan)
+
+            //將元素插入元素「之後」的封裝自訂函數
+            function insertAfter(newNode1, oldNode1) {
+                //先判斷oldNode1是否是最後一個節點
+                var parent1 = oldNode1.parentNode;
+                if (oldNode1 == parent1.lastChild) {
+                    //若是最後一個節點，直接插入到子節點的末尾
+                    parent1.appendChild(newNode1);
+                } else {
+                    //否則插入到oldNode1 的下一個節點之前
+                    parent1.insertBefore(newNode1, oldNode1.nextSibling);
+                }
+            }
+
+
+
+
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" title="hello" name="world" class="box">
+        <em>中文</em>
+        英文
+        <span>span44ff</span>
+    </div>
+    <div class="rtt">
+        <div id="uj" name="ffff" type="text" class="">fff</div>
+    </div>
+    <button id="btn">按鈕</button>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+$primary: #30c39e;
+
+%transition {
+    transition: all 0.3s ease;
+}
+
+.btn {
+    padding: 6px 12px;
+    background: $primary;
+    @extend %transition;
+    &:hover {
+        background: darken($primary, 5%);
+    }
+    &:active {
+        background: darken($primary, 10%);
+    }
+}
+
+body {
+    background-color: #222222;
+    color: #ffffff;
+    h1 {
+        font-size: 24px;
+        font-size: 12%;
+    }
+}

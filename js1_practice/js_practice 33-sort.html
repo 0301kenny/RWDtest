@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    // var abc = 0;
+    var arrb = [9, 7, 4, 3, 1, 0];
+   /* for (var i = 0; i < 5; i++) {
+        var cde = [];
+        for (var j = 0; j < 5; j++) {
+             cde.push(++abc);
+         }
+         arrb.push(cde); 
+     }*/
+     // alert(arrb[1][1]);
+     for (var i = 0; i < arrb.length; i++) {
+        for (var j = 0; j < arrb.length -i -1; j++) {
+            if (arrb[j] < arrb[j + 1]) {
+                var tmpp = arrb[j + 1];
+                arrb[j + 1] = arrb[j];
+                arrb[j] = tmpp;
+            }
+        }
+     }
+     alert(arrb);
+    </script>
+</head>
+
+<body>
+    <!-- <input type="text" id="txt" value="defaultword">
+            <input type="button" id="btn" value="清空"> -->
+</body>
+
+</html>

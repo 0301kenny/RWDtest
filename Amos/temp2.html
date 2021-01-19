@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100,500&display=swap" rel="stylesheet">
+    <style type="text/css">
+    #div-before {
+        background-color: #000;
+        color: #eee;
+    }
+
+    #div-1 {
+        /* position: relative; */
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        padding: 10px;
+        /* height: 100%; */
+        background-color: #222;
+        color: #eee;
+    }
+
+    #div-1-padding {
+        padding: 40px;
+        background-color: #444;
+        color: #eee;
+    }
+
+    #div-1a {
+        /* position: absolute; */
+        float: left;
+        top: 0;
+        right: 0;
+        width: 200px;
+        background-color: #666;
+        color: #eee;
+    }
+
+    #div-1b {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* float: left; */
+        /* z-index: ; */
+        width: 200px;
+        background-color: #666;
+        color: #eee;
+    }
+
+    #div-1c {
+        /* float:left; */
+        clear: both;
+        background-color: #999;
+        color: #eee;
+    }
+
+    #div-after {
+        background-color: #bbb;
+        color: #eee;
+    }
+    </style>
+    <script src="js_tool.js"></script>
+    <script type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="example">
+        <div id="div-before">
+            <p>id = div-before</p>
+        </div>
+        <div id="div-1">
+            <div id="div-1-padding">
+                <p>id = div-1</p>
+                <div id="div-1a">
+                    <p>id = div-1a</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit.</p>
+                </div>
+                <div id="div-1b">
+                    <p>id = div-1b</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pretium dui sit amet felis. Integer sit amet diam. Phasellus ultrices viverra velit. Nam mattis, arcu ut bibendum commodo, magna nisi tincidunt tortor, quis accumsan augue ipsum id lorem.</p>
+                </div>
+                <div id="div-1c">
+                    <p>id = div-1c</p>
+                </div>
+            </div>
+        </div>
+        <!-- /id=div-1-padding /id=div-1 -->
+        <div id="div-after">
+            <p>id = div-after</p>
+        </div>
+    </div>
+</body>
+
+</html>

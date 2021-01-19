@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>018 聊天訊息</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #d3effb;
+    }
+
+    .dialogue {
+        width: 500px;
+        padding: 20px;
+        box-shadow: 0 0 10px #3e92cc;
+        background-color: #f4f5f7;
+        border-radius: 8px;
+
+
+    }
+
+    .dialogue .name{
+        font-weight: 700;
+    }
+
+    .user {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: start;
+    }
+
+    .user .ggc .name{
+        padding: 0px 20px;
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+
+    .local{
+        justify-content: flex-end;
+    }
+
+    .user .avatar {
+        width: 60px;
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .user .pic {
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .user .pic img {
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .user .txt{
+        background-color: #ddd;
+        font-weight: 300;
+        padding: 16px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .remote .txt{
+        margin-left: 20px;
+        margin-right: 80px;
+        background-color: #fff;
+        color: #a1b4c5;
+    }
+    .local .txt{
+        margin-left: 80px;
+        margin-right: 20px;
+        order: -1;
+        background-color: #3e92cc;
+        color: #fff;
+    }
+
+    .remote .txt::before,
+    .local .txt::before{
+        content: "";
+        position: absolute;
+        top: 16px;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        /* border-right: 4px solid transparent; */
+    }
+    .remote .txt::before{
+        border-right: 10px solid #fff;
+        left: -10px;
+    }
+    .local .txt::before{
+        border-left: 10px solid #3e92cc;
+        right: -10px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="dialogue">
+        <div class="user remote">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://i.pravatar.cc/300?img=32">
+                </div>
+                
+            </div>
+            <div class="ggc">
+                <div class="name">Ruse</div>
+                <div class="txt">
+                    社會主義註冊根本合理思維不可結婚
+                </div>
+            </div>
+        </div>
+        <div class="user local">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://i.pravatar.cc/300?img=41">
+                </div>
+                <div class="name">Alvee</div>
+            </div>
+            <div class="txt">
+                機場發佈日期讓我們個人想，本次專利。
+            </div>
+        </div>
+        <div class="user local">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://i.pravatar.cc/300?img=41">
+                </div>
+                <div class="name">Alvee</div>
+            </div>
+            <div class="txt">
+                專題科研在那裡構成爆炸什麼時候懷疑已被格式那樣熟悉，在這裡降低輕。
+            </div>
+        </div>
+        <div class="user remote">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://i.pravatar.cc/300?img=32">
+                </div>
+                <div class="name">Ruse</div>
+            </div>
+            <div class="txt">
+                社會主義註冊根本合理思維不可結婚
+            </div>
+        </div>
+        <div class="user local">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://i.pravatar.cc/300?img=41">
+                </div>
+                <div class="name">Alvee</div>
+            </div>
+            <div class="txt">
+                冠軍檢測都市一部讓你無限分別室內思想辦，不但格式邀請不限地址完美眼中塑，圖形男孩每月甚至廣泛碩士科技，才是負責做出沒人就算本網最多聯繫電話保留，男人隊伍意識新人大陸查看看不到新，美女評級轎車訂單。
+            </div>
+        </div>
+        <div class="user remote">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://i.pravatar.cc/300?img=32">
+                </div>
+                <div class="name">Ruse</div>
+            </div>
+            <div class="txt">
+                幹部裝置輕輕能量強調興趣足球外掛，科研迅速於是頻道批評極大手，進去欣賞士兵一定兄弟我市腦袋立即不了繼續參觀注重陝西國人，文檔獨特聽。
+            </div>
+        </div>
+        <div class="user local">
+            <div class="avatar">
+                <div class="pic">
+                    <img src="https://i.pravatar.cc/300?img=41">
+                </div>
+                <div class="name">Alvee</div>
+            </div>
+            <div class="txt">
+                一種最高彷彿做到軍
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

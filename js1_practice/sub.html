@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            background-color: #ff0;
+        }
+    </style>
+    <script type="text/javascript">
+       window.onload = function () {
+           var obtn = document.getElementById("btn");
+
+           obtn.onclick = function () {
+               open("sup.html","子窗口","width = 400,height=400,top = 200, left = 200");
+           }
+       }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="count">
+            <span id="id_h">00</span>:
+            <span id="id_m">00</span>:
+            <span id="id_s">00</span>
+        </div>
+    </div>
+    <input type="button" id="btn" value="打開子窗口">
+    
+</body>
+
+</html>

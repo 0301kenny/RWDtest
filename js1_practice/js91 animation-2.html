@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #000000;
+            left: 0;
+            top: 0;
+            position: absolute;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+
+    <script src="./animation.js"></script>
+    <script>
+        var div = document.querySelector('div');
+        animation(div, {
+            width: 200, left: 500, opacity: 20
+        });
+    </script>
+</body>
+
+</html>

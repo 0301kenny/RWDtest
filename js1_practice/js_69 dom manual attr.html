@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background-color: #222;
+            color: #aaa;
+        }
+    </style>
+    <script src="js_tool.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            /* var odiv = document.getElementById("div1");
+            var node = document.createElement("strong");
+
+            odiv.parentNode.replaceChild(node, odiv); */
+            /* var odiv = document.getElementById("div1");
+            var ospan = document.getElementsByTagName("span")[0];
+            var node2 = odiv.cloneNode(true);
+            ospan.parentNode.insertBefore(node2,ospan); */
+
+            var odiv = document.getElementById("div1");
+            odiv.parentNode.removeChild(odiv);
+
+        }
+    </script>
+</head>
+
+<body>
+    <span>span44ff</span>
+    <div id="div1">
+    英文
+    </div>
+    <p>p</p>
+    <button id="btn">按鈕</button>
+</body>
+
+</html>

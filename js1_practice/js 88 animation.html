@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: #000;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var spx = 100;
+            var spy = 3;
+            var div1 = document.querySelector('div');
+            function move1() {
+                var cLeft = parseInt(window.getComputedStyle(div1).left);
+                var cTop = parseInt(window.getComputedStyle(div1).top);
+
+                checkBorderCollision(div1);
+                var mleft = cLeft + spx;
+                var mtop = cTop + spy;
+
+                div1.style.left = mleft + "px";
+                div1.style.top = mtop + "px";
+            }
+
+            function checkBorderCollision(el) {
+                var style = window.getComputedStyle(el);
+                var left = parseInt(style.left);
+                var top = parseInt(style.top);
+                var w = parseInt(style.width);
+                var h = parseInt(style.height);
+
+                if (left < 0) {
+                    left = 0;
+                    spx *= -1
+                }
+                if (left > window.innerWidth - w) {
+                    left = window.innerWidth - w;
+                    spx *= -1
+                }
+
+                if (top < 0) {
+                    top = 0;
+                    spy *= -1
+                }
+
+                if (top > window.innerHeight - h) {
+                    top = window.innerHeight - h;
+                    spy *= -1
+                }
+
+                el.style.top = top + 'px';
+                el.style.left = left + 'px';
+            }
+
+            setInterval(function () {
+                move1()
+            }, 30);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div>3333</div>
+</body>
+
+</html>

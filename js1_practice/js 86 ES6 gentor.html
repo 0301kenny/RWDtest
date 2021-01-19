@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+
+        /* function* foo(x) {
+            yield x + 1;
+            yield x + 2;
+            return x + 3;
+
+        }
+        var f = foo(1);
+        // console.log(f);
+        console.log(f.next(), f.next(), f.next()); */
+
+        /* function* foo(x) {
+            var y = 2 * (yield (x + 1));
+            var z = yield (y / 3);
+            return (x + y + z);
+        }
+
+        var it = foo(5);
+        console.log(it.next(3)); // 6
+        console.log(it.next(12));
+        console.log(it.next(13)); // x=5 , y=24 ,z =13 */
+
+        /* function* feibo(n) {
+            let a = 0;
+            let b = 1;
+            for (let i = 0; i < n; i++) {
+                yield a;
+                let temp = a + b;
+                a = b;
+                b = temp;
+            }
+
+        }
+        var f = feibo(10);
+        for (let i of f) {
+            console.log(i);
+        } */
+
+        /*function* foo() {
+            for (let i = 0; i < 10; i++) {
+                let x = yield `再等一下，i=${1}`;
+                console.log(x);
+            }
+        }
+
+        setTimeout(() => { console.log("終於輪到我了"); }, 1)
+
+        var a = foo();
+        console.log(a);*/
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

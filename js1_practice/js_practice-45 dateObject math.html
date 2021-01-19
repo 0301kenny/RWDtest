@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function $(id) {
+        return document.getElementById(id);
+    }
+    window.onload = function() {
+        var count = 0;
+        var timer = null;
+        $("start").onclick = function() {
+            timer = setInterval(function() {
+                count++;
+                $("id_s").innerHTML = shownum(count % 60);
+                $("id_m").innerHTML = shownum(parseInt(count / 60) % 60);
+                $("id_h").innerHTML = shownum(parseInt(count / 3600));
+            }, 100);
+        }
+
+        //暫停
+        $("pause").onclick = function() {
+            clearInterval(timer);
+        }
+
+        //停止
+        $("stop").onclick = function() {
+            clearInterval(timer);
+            count = 0;
+            $("id_s").innerHTML = "00";
+            $("id_m").innerHTML = "00";
+            $("id_h").innerHTML = "00";
+
+        }
+
+    }
+
+
+
+
+    function shownum(num) {
+        if (num < 10) {
+            return "0" + num;
+        } else {
+            return num;
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="count">
+            <span id="id_h">00</span>:
+            <span id="id_m">00</span>:
+            <span id="id_s">00</span>
+        </div>
+    </div>
+    <input type="button" id="start" value="開始" onclick="this.disabled = true">
+    <input type="button" id="pause" value="暫停">
+    <input type="button" id="stop" value="停止">
+</body>
+
+</html>

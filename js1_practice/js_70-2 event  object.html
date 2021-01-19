@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background-color: #222;
+            color: #aaa;
+            display: inline-block;
+        }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script src="js_tool.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var odiv = document.getElementById('div1');
+            odiv.onclick = function (e) {
+                console.log(window.event);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <span>span44ff</span>
+    <div id="div1"> 英文55 </div>
+    <p>p</p>
+    <button id="btn">按鈕</button>
+    <form>
+        <input type="text" name="" id="">
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>

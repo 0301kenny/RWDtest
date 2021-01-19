@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style type="text/css">
+       
+    </style>
+    <script type="text/javascript">
+    
+        window.onload = function () {
+            var oDiv = document.getElementById("div1");
+            var iDiv = document.getElementById("fjjfj");
+            
+            alert(oDiv.childNodes[0].nodeType);
+            // alert(oDiv.childNodes[2].nodeName);
+            // alert(oDiv.childNodes[2].nodeType);
+            // alert(oDiv.childNodes[2].nodeValue);
+            var nodekk = removespp(oDiv.childNodes);
+
+            alert(nodekk[0].nodeName);
+            alert(oDiv.childNodes.length);
+
+            function removespp(nodekk) {
+                var result = [];
+                for (let i = 0; i < nodekk.length; i++) {
+                    if (nodekk[i].nodeType == 3 && /^\s+$/.test(nodekk[i].nodeValue)) {
+                        continue;
+                        
+                    }
+                    result.push(nodekk[i]);
+                }
+                return result;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" title="hello" name="world" class="box">
+        <em>中文</em>
+        英文
+        <strong>韓文</strong>
+    </div>
+    <div>
+        <ii></ii>
+        <ii></ii>
+        <ii></ii>
+    </div>
+</body>
+
+</html>

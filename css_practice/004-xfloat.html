@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>004 交錯漂浮圖文</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100,500&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            padding: 100px 0;
+            background: linear-gradient(20deg, #3d5493, #1aa2a0) fixed center center / 100% 100%;
+        }
+
+        .wrap {
+            width: 90%;
+            margin: auto;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 70px;
+            /* background-color: #333; */
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .item h2 {
+            font-weight: 900;
+            font-size: 1.4em;
+            line-height: 1.1;
+        }
+
+        .item p {
+            padding: 3%;
+            font-weight: 300;
+            /* background-color: #ccc; */
+        }
+
+        .item .pic {
+            width: 55%;
+            flex-shrink: 0;
+
+        }
+
+        .item .pic img {
+            width: 100%;
+            vertical-align: middle;
+
+        }
+
+        .item .txt {
+            width: 55%;
+            background-color: #fa8;
+            flex-shrink: 0;
+            padding: 3% 5%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        .item> :first-child {
+            margin-right: -10%;
+        }
+
+        .item:nth-child(1) .txt {
+            background-color: rgba(42, 253, 193, .4);
+        }
+
+        .item:nth-child(2) .txt {
+            background-color: rgba(15, 23, 223, .4);
+        }
+
+        .item:nth-child(3) .txt {
+            background-color: rgba(92, 53, 103, .4);
+        }
+
+        .item:nth-child(4) .txt {
+            background-color: rgba(71, 113, 73, .4);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- item1 -->
+        <div class="item">
+            <div class="pic">
+                <img src="http://fakeimg.pl/350x200/00CED1/FFF/?text=img+placeholder" alt="">
+            </div>
+            <div class="txt">
+                <h2>Lorem ipsum, dolor sit </h2>
+                <p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Facilis iure cu</p>
+            </div>
+        </div>
+        <!-- item2 -->
+        <div class="item">
+            <div class="txt">
+                <h2>Lorem ipsum dolor sit amet </h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae al
+                </p>
+            </div>
+            <div class="pic">
+                <img src="http://fakeimg.pl/350x200/00CED1/FFF/?text=img+placeholder" alt="">
+            </div>
+        </div>
+        <!-- item3 -->
+        <div class="item">
+            <div class="pic">
+                <img src="http://fakeimg.pl/350x200/00CED1/FFF/?text=img+placeholder" alt="">
+            </div>
+            <div class="txt">
+                <h2>Lorem, ipsum dolor sit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed labori</p>
+            </div>
+        </div>
+        <!-- item4 -->
+        <div class="item">
+            <div class="txt">
+                <h2>Lorem ipsum dolor</h2>
+                <p>Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Possimus praesentium tempore molestiae
+                    optio repellat d</p>
+            </div>
+            <div class="pic">
+                <img src="http://fakeimg.pl/350x200/00CED1/FFF/?text=img+placeholder" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
